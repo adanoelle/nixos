@@ -247,6 +247,7 @@ in
     lolcat
     htop
     brave
+    devenv
     libvirt
     lxqt.lxqt-policykit
     lm_sensors
@@ -295,6 +296,7 @@ in
     neovide
     greetd.tuigreet
     uv
+    ventoy-full
   ];
 
   fonts = {
@@ -469,6 +471,12 @@ in
   };
 
   console.keyMap = "${keyboardLayout}";
+
+  nix.settings.trusted-users = [ "root" "myuser" ];
+
+  nix.extraOptions = ''
+    trusted-users = root ada
+  '';
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

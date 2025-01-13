@@ -21,7 +21,7 @@ $env.PROMPT_COMMAND = { create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = { create_right_prompt }
 
 alias ll = ls -l
-alias rebuild = sudo nixos-rebuild switch --flake /home/ada/zaneyos/hosts/bubbles#bubbles
+alias rebuild = sudo nixos-rebuild switch --flake /home/ada/nixos/hosts/bubbles#bubbles
 
 $env.PATH = ($env.PATH | split row (char esep) | append "/Users/ada/.cargo/bin")
 $env.PATH = ($env.PATH | split row (char esep) | append "/opt/homebrew/bin")
