@@ -44,7 +44,7 @@
               nixpkgs.overlays = [ 
                 rust-overlay.overlays.default 
                 (final: prev: {
-                    zen-browser = inputs.zen-browser.packages.${system}.default;
+                  zen-browser = inputs.zen-browser.packages."${system}".default;
                 })
               ];
               environment.systemPackages = with pkgs; [ 
