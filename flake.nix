@@ -15,11 +15,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     musnix.url = "github:musnix/musnix";
-
+    zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 
   outputs =
-    { nixpkgs, home-manager, rust-overlay, musnix, ... }@inputs:
+    { nixpkgs, home-manager, rust-overlay, musnix, zen-browser, ... }@inputs:
     let
       system = "aarch64-linux";
       host = "bubbles";
