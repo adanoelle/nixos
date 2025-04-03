@@ -49,7 +49,7 @@
               ];
               environment.systemPackages = with pkgs; [ 
                 rust-bin.stable.latest.default 
-                zen-browser
+                inputs.zen-browser.packages.${system}.default
               ];
             })
 
