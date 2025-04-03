@@ -21,7 +21,7 @@
   outputs =
     { nixpkgs, home-manager, rust-overlay, musnix, zen-browser, ... }@inputs:
     let
-      system = "aarch64-linux";
+      system = "x86_64-linux";
       host = "bubbles";
       username = "ada";
     in
