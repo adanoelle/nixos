@@ -298,7 +298,6 @@ in
     greetd.tuigreet
     uv
     ventoy-full
-    inputs.zen-browser.packages.aarch64-linux.default
   ];
 
   fonts = {

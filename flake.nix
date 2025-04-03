@@ -41,8 +41,16 @@
             inputs.stylix.nixosModules.stylix
 
             ({ pkgs, ... }: {
-              nixpkgs.overlays = [ rust-overlay.overlays.default ];
-              environment.systemPackages = [ pkgs.rust-bin.stable.latest.default ];
+              nixpkgs.overlays = [ 
+                rust-overlay.overlays.default 
+                (final: prev: {
+                    zen-browser = inputs.zen-browser.packages.${system}.default;
+                })
+              ];
+              environment.systemPackages = with pkgs; [ 
+                rust-bin.stable.latest.default 
+                zen-browser
+              ];
             })
 
             home-manager.nixosModules.home-manager
